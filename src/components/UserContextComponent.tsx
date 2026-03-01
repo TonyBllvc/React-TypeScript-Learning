@@ -1,16 +1,16 @@
-interface PersonProps {
+import { useContext } from "react";
+import { UserContext } from "../context/userContext";
+
+interface Props {
   name: string;
   age: string;
   isMarried: boolean;
-  // details: {
-  //     hobbies: string[];
-  //     profession: string;
-  // };
 }
 
 // Note: If you pass a props, without being explicit, it will be of type "any", which is not recommended in TypeScript.
-export const Person = (props: PersonProps) => {
-  // export const Person = (props: { name: string }) => {
+export const UserContextComponent = (props: Props) => {
+  const { users, addUser, updateUser, deleteUser } = useContext(UserContext);
+
   return (
     <div>
       <p> Name {props.name}</p>
