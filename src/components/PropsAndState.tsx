@@ -22,6 +22,7 @@ export const PropsAndState = (props: PersonProps) => {
 
   return (
     <div>
+      <h2> Usage of Props and State </h2>
       {isShowInfo && (
         <>
           <p> Name {props.name}</p>

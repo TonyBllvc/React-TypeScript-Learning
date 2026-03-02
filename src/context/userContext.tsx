@@ -6,7 +6,7 @@ export interface User {
   isMarried: boolean;
 }
 
-interface UserContextType {
+export interface UserContextType {
   users: User[] | null;
   addUser: (user: User) => void;
   updateUser: (id: string) => void;
@@ -21,7 +21,7 @@ const contextInitialValue: UserContextType = {
   deleteUser: () => null,
 };
 
-const UserContext = createContext<UserContextType>(contextInitialValue);
+export const UserContext = createContext<UserContextType>(contextInitialValue);
 
 interface Props {
   children: React.ReactNode;
